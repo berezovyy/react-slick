@@ -2694,6 +2694,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if ((index - spec.currentSlide) % spec.slideCount === 0 || (index - 1 - spec.currentSlide) % spec.slideCount === 0) {
 	      slickBlur = true;
 	    }
+	  } else {
+	    if ((index - spec.currentSlide) % spec.slideCount === 0) {
+	      slickBlur = true;
+	    }
 	  }
 
 	  return (0, _classnames2.default)({
