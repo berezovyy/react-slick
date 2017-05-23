@@ -24,9 +24,35 @@ var getSlideClasses = (spec) => {
   } else {
     slickActive = (spec.currentSlide <= index) && (index < spec.currentSlide + spec.slidesToShow);
   }
+  var displayedSlides = spec.currentSlide + spec.slidesToShow;
+  var slickBlur = false;
+
+  if (spec.slidesToShow === 6) {
+    if ((index - 1 - spec.currentSlide) % spec.slideCount === 0 || (index - 2 - spec.currentSlide) % spec.slideCount === 0 || (index - 3 - spec.currentSlide) % spec.slideCount === 0 || (index - 4 - spec.currentSlide) % spec.slideCount === 0 || (index - 5 - spec.currentSlide) % spec.slideCount === 0) {
+      slickBlur = true;
+    }
+  } else if (spec.slidesToShow === 5) {
+    if ((index - 1 - spec.currentSlide) % spec.slideCount === 0 || (index - 2 - spec.currentSlide) % spec.slideCount === 0 || (index - 3 - spec.currentSlide) % spec.slideCount === 0 || (index - 4 - spec.currentSlide) % spec.slideCount === 0) {
+      slickBlur = true;
+    }
+  } else if (spec.slidesToShow === 4) {
+    if ((index - 1 - spec.currentSlide) % spec.slideCount === 0 || (index - 2 - spec.currentSlide) % spec.slideCount === 0 || (index - 3 - spec.currentSlide) % spec.slideCount === 0) {
+      slickBlur = true;
+    }
+  } else if (spec.slidesToShow === 3) {
+    if ((index - 1 - spec.currentSlide) % spec.slideCount === 0 || (index - 2 - spec.currentSlide) % spec.slideCount === 0) {
+      slickBlur = true;
+    }
+  } else if (spec.slidesToShow === 2) {
+    if ((index - 1 - spec.currentSlide) % spec.slideCount === 0) {
+      slickBlur = true;
+    }
+  }
+
   return classnames({
     'slick-slide': true,
     'slick-active': slickActive,
+    'slick-blur': slickBlur,
     'slick-center': slickCenter,
     'slick-cloned': slickCloned
   });
