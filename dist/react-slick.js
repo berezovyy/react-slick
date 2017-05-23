@@ -2675,23 +2675,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var slickBlur = false;
 
 	  if (spec.slidesToShow === 6) {
-	    if ((index - 1 - spec.currentSlide) % spec.slideCount === 0 || (index - 2 - spec.currentSlide) % spec.slideCount === 0 || (index - 3 - spec.currentSlide) % spec.slideCount === 0 || (index - 4 - spec.currentSlide) % spec.slideCount === 0 || (index - 5 - spec.currentSlide) % spec.slideCount === 0) {
+	    if ((index - spec.currentSlide) % spec.slideCount === 0 || (index - 1 - spec.currentSlide) % spec.slideCount === 0 || (index - 2 - spec.currentSlide) % spec.slideCount === 0 || (index - 3 - spec.currentSlide) % spec.slideCount === 0 || (index - 4 - spec.currentSlide) % spec.slideCount === 0 || (index - 5 - spec.currentSlide) % spec.slideCount === 0) {
 	      slickBlur = true;
 	    }
 	  } else if (spec.slidesToShow === 5) {
-	    if ((index - 1 - spec.currentSlide) % spec.slideCount === 0 || (index - 2 - spec.currentSlide) % spec.slideCount === 0 || (index - 3 - spec.currentSlide) % spec.slideCount === 0 || (index - 4 - spec.currentSlide) % spec.slideCount === 0) {
+	    if ((index - spec.currentSlide) % spec.slideCount === 0 || (index - 1 - spec.currentSlide) % spec.slideCount === 0 || (index - 2 - spec.currentSlide) % spec.slideCount === 0 || (index - 3 - spec.currentSlide) % spec.slideCount === 0 || (index - 4 - spec.currentSlide) % spec.slideCount === 0) {
 	      slickBlur = true;
 	    }
 	  } else if (spec.slidesToShow === 4) {
-	    if ((index - 1 - spec.currentSlide) % spec.slideCount === 0 || (index - 2 - spec.currentSlide) % spec.slideCount === 0 || (index - 3 - spec.currentSlide) % spec.slideCount === 0) {
+	    if ((index - spec.currentSlide) % spec.slideCount === 0 || (index - 1 - spec.currentSlide) % spec.slideCount === 0 || (index - 2 - spec.currentSlide) % spec.slideCount === 0 || (index - 3 - spec.currentSlide) % spec.slideCount === 0) {
 	      slickBlur = true;
 	    }
 	  } else if (spec.slidesToShow === 3) {
-	    if ((index - 1 - spec.currentSlide) % spec.slideCount === 0 || (index - 2 - spec.currentSlide) % spec.slideCount === 0) {
+	    if ((index - spec.currentSlide) % spec.slideCount === 0 || (index - 1 - spec.currentSlide) % spec.slideCount === 0 || (index - 2 - spec.currentSlide) % spec.slideCount === 0) {
 	      slickBlur = true;
 	    }
 	  } else if (spec.slidesToShow === 2) {
-	    if ((index - 1 - spec.currentSlide) % spec.slideCount === 0) {
+	    if ((index - spec.currentSlide) % spec.slideCount === 0 || (index - 1 - spec.currentSlide) % spec.slideCount === 0) {
 	      slickBlur = true;
 	    }
 	  }
